@@ -1,0 +1,16 @@
+verificar timers do sistema /proc/timer_list
+
+API padrão Linux:
+http://man7.org/linux/man-pages/man2/timer_create.2.html
+
+
+High Resolution Timer:
+https://www.kernel.org/doc/Documentation/timers/hrtimers.txt
+Exemplos e muita informação sobre RT em rt-tests:
+https://rt.wiki.kernel.org/index.php/Cyclictest
+
+
+Exemplos:
+ - PWM
+ - Controle de motor de passo  
+ - Experimento com Osciloscopio
