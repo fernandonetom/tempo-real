@@ -34,6 +34,6 @@ unsigned long combinations(unsigned long select, unsigned long from) {
 }
 
 int main(void){
-   combinations(5, 12);
-	 return 0;
+	combinations(5, 12);
+	return 0;
 }
