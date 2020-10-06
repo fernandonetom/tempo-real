@@ -21,9 +21,8 @@
  */ 
 
 int global;
-static int  i = 5;
+int i = 5;
 
 int main(void){ 
-   int arr[5] = {5,4,3,2,1};
    return 0;
 }

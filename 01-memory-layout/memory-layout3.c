@@ -19,10 +19,11 @@
  * objdump -S -j .bss   prog > prog.asm ; less -S prog.asm 
  *
  */ 
- 
-int global;
 
-int main(void){
-   static int  i = 5;
+int global;
+static int  i = 5;
+
+int main(void){ 
+   int arr[5] = {5,4,3,2,1};
    return 0;
 }

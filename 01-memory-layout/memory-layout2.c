@@ -19,9 +19,10 @@
  * objdump -S -j .bss   prog > prog.asm ; less -S prog.asm 
  *
  */ 
-
+ 
 int global;
 
 int main(void){
+   static int  i = 5;
    return 0;
 }
