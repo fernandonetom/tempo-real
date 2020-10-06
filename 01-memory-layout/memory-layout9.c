@@ -25,7 +25,7 @@
 unsigned long factorial(unsigned long n) {
 	int f = 1;
 	printf("F: n[%8d],  f[%8d]  =>  &f[0x%p]\n", n, f, &f);
-	if (n>1) f = f*factorial(n-1);
+	if (n>1) f = n*factorial(n-1);
 	printf("F: n[%8d],  f[%8d]  =>  &f[0x%p]\n", n, f, &f);
 	return f;
 }
@@ -36,6 +36,8 @@ unsigned long combinations(unsigned long select, unsigned long from) {
 }
 
 int main(void){
-	combinations(4, 12);
+	int a=4, b=12;
+	int c = combinations(a, b);
+	printf("When picking %d elements from a set of %d, you may end up with %d unique combinations.\n", a,b,c);
 	return 0;
 }
