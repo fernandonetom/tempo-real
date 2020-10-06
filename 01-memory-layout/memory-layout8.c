@@ -2,6 +2,7 @@
  * Departamento de Engenharia Elétrica - UFPB
  * Sistemas em Tempo Real
  * Isaac Maia Pessoa
+ * Lucas Vinicius Hartmann
  *
  * Descrição:
  * Layout de memória de um processo
@@ -33,10 +34,10 @@ int main (void)
   char local1 = 1; //variável local inicializada
   char local2 = 2; //variável local inicializada
 
-  printf("text\t%p\t%p\n", &main, &printf);
-  printf("bss \t%p\t%p\n", &uninit1, &uninit2);
-  printf("data\t%p\t%p\n", &init1, &init2);
-  printf("auto\t%p\t%p\n", &local1, &local2);
+  printf("text...:    &main[%016p]   &printf[%016p]\n", &main,    &printf );
+  printf("bss....: &uninit1[%016p]  &uninit2[%016p]\n", &uninit1, &uninit2);
+  printf("data...:   &init1[%016p]    &init2[%016p]\n", &init1,   &init2  );
+  printf("stack..:  &local1[%016p]   &local2[%016p]\n", &local1,  &local2 );
   
   return 0;
 }

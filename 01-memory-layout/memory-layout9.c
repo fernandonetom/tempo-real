@@ -23,9 +23,11 @@
 #include <stdio.h>
 
 unsigned long factorial(unsigned long n) {
-	printf("F: n[%8d]  =>  &n[0x%p]\n", n, &n);
-	if (n<=1) return 1;
-	return n * factorial(n-1);
+	int f = 1;
+	printf("F: n[%8d],  f[%8d]  =>  &f[0x%p]\n", n, f, &f);
+	if (n>1) f = f*factorial(n-1);
+	printf("F: n[%8d],  f[%8d]  =>  &f[0x%p]\n", n, f, &f);
+	return f;
 }
 
 unsigned long combinations(unsigned long select, unsigned long from) {
@@ -34,6 +36,6 @@ unsigned long combinations(unsigned long select, unsigned long from) {
 }
 
 int main(void){
-	combinations(5, 12);
+	combinations(4, 12);
 	return 0;
 }
