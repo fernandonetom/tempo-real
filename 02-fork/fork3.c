@@ -29,18 +29,19 @@ int main() {
 	if (pid == 0) { /* processo filho */
 		global_var += 15;
 		
-		printf ("FILHO..: getpid()=%d, getppid()=%d, global_var=%d, local_var=%d\n",
+		printf ("FILHO, parte 1..: getpid()=%d, getppid()=%d, global_var=%d, local_var=%d\n",
 			getpid(), getppid(), global_var, local_var
 		);
 		sleep(4); //espera 4s
-		printf ("FILHO..: getpid()=%d, getppid()=%d, global_var=%d, local_var=%d\n",
+		printf ("FILHO, parte 2..: getpid()=%d, getppid()=%d, global_var=%d, local_var=%d\n",
 			getpid(), getppid(), global_var, local_var
 		); 
 		return 0;
 	} else if (pid > 0) { /* processo pai */
+		sleep(2);
 		local_var++;
 
-		printf ("PAI....: getpid()=%d, getppid()=%d, global_var=%d, local_var=%d\n",
+		printf ("PAI.............: getpid()=%d, getppid()=%d, global_var=%d, local_var=%d\n",
 			getpid(), getppid(), global_var, local_var
 		); 
 		
