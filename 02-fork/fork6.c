@@ -22,7 +22,7 @@ int main() {
 	
 	if (i == 0) { // Child process
 		printf("Child is sleeping...\n");
-		if (0) {
+		if (1) { // Change between 0 to 1, and repeat test.
 			sleep(60);
 		} else {
 			execl("/bin/sleep","sleep","60",0);
