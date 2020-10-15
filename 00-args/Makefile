@@ -10,4 +10,4 @@ all: $(PROGS)
 	gcc $(CFLAGS)  -o $@ $<
 
 clean:
-	rm -f $(PROGS)
+	$(RM) $(PROGS) *.o

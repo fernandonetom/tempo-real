@@ -6,4 +6,4 @@ CCFLAGS = -std=gnu++14
 all: $(PROGS)
 
 clean:
-	rm -f $(PROGS)
+	$(RM) $(PROGS)
