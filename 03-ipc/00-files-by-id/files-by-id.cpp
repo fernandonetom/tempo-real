@@ -32,6 +32,7 @@ void standard_output() {
 void standard_input() {
 	char buff[1024];
 	
+	cout << "Digite algo e tecle ENTER: " << flush
 	while (true) {
 		int n = read(STDIN_FILENO, buff, 1024);
 		if (n <= 0) {
