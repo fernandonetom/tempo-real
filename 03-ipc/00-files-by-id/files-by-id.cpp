@@ -31,16 +31,18 @@ void standard_output() {
 
 void standard_input() {
 	char buff[1024];
+
+	cout << "STDIN_FILENO is " << STDIN_FILENO << "." << endl;
 	
-	cout << "Digite algo e tecle ENTER: " << flush;
 	while (true) {
+		cout << "Type something them ENTER. CTRL+D to end nicely. CTRL+C to cancel." << endl;
 		int n = read(STDIN_FILENO, buff, 1024);
 		if (n <= 0) {
-			cout << "Fuu! " << n << endl;
+			cout << "Bad: n=" << n << endl;
 			break;
 		}
 		
-		cout << "Recebidos " << n << "bytes: \"" << flush;
+		cout << "Got " << n << "bytes: \"" << flush;
 		write(STDOUT_FILENO, buff, n);
 		cout << "\"" << endl;
 	}
