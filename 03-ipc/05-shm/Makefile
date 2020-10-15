@@ -12,4 +12,4 @@ writer: writer.o shared_memory.o shared_memory.h
 	gcc -o writer writer.o shared_memory.o -lrt -lpthread
 
 clean:
-	rm -f reader worker writer
+	rm -f reader worker writer *.o
