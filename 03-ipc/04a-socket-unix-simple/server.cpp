@@ -1,3 +1,9 @@
+/* DEE / CEAR / UFPB
+ * Realtime Systems: UNIX domain sockets example.
+ *
+ * (c) 2020 Lucas V. Hartmann <gitlab.com/lucas.hartmann>
+ */
+
 #include <iostream>
 #include <unistd.h>
 #include <sys/socket.h>
