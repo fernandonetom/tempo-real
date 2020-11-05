@@ -10,9 +10,9 @@
  * In this program we calculate pi in the slowest possible way:
  * 1 - Imagine a pixelated circle of known radius R.
  * 2 - Iterate over all pixels on quadrant I, from (0,0) to (R,R).
- * 3 - Count pixels whose center is less-than R away from (0,0):
+ * 3 - Count pixels whose center is less-than-R away from (0,0):
  *         square(X+0.5) + square(Y+0.5) < square(R)
- *     Rewriting as ints (0.25 rounds to 0):
+ *     Rewriting as ints (0.25+0.25 rounds to 0):
  *         X*X + X * Y*Y + Y < R*R
  * 4 - Counted pixels are approximate area of first quadrant, so:
  *         pi = (counted_pixels * 4) / (r * r)
@@ -138,7 +138,8 @@ int main()
         delete res;
     }
 
-    // All done, print result.
+    // Print result. Note the dot after 4, making it and all the following 
+    // math run as double-precision floating-point (not integers).
     cout << "Pi = " << (a * 4. / r / r) << endl;
 
     return 0;
