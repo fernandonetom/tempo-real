@@ -113,7 +113,7 @@ int main()
     }
 
     // All threads are running
-    
+
     // Iterate over all threads collecting results
     uint64_t a = 0;
     for (int i = 0; i < NUM_CPU; i++)
@@ -126,7 +126,8 @@ int main()
          * to the pointer, and has to be cast to type-erased void**.
          * This base interface is quite ugly, but is highly generic. 
          */
-        if (pthread_join(tid[i], (void **)&res) < 0) {
+        if (pthread_join(tid[i], (void **)&res) < 0)
+        {
             cerr << "pthread_join(...) failed!" << endl;
             return -1;
         }
@@ -138,7 +139,7 @@ int main()
         delete res;
     }
 
-    // Print result. Note the dot after 4, making it and all the following 
+    // Print result. Note the dot after 4, making it and all the following
     // math run as double-precision floating-point (not integers).
     cout << "Pi = " << (a * 4. / r / r) << endl;
 

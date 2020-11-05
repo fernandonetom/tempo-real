@@ -85,13 +85,14 @@ int main()
     }
 
     // All threads are running
-    
+
     // Iterate over all threads collecting results
     uint64_t a = 0;
     for (int i = 0; i < NUM_CPU; i++)
     {
         // Wait for thread completion.
-        if (pthread_join(tid[i], 0) < 0) {
+        if (pthread_join(tid[i], 0) < 0)
+        {
             cerr << "pthread_join(...) failed!" << endl;
             return -1;
         }
