@@ -112,9 +112,9 @@ int main()
         }
     }
 
-    // All thread are running
+    // All threads are running
     
-    // Iteate over all threads collecting results
+    // Iterate over all threads collecting results
     uint64_t a = 0;
     for (int i = 0; i < NUM_CPU; i++)
     {
