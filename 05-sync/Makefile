@@ -1,15 +1,14 @@
 #Esse Makefile gera executaveis de todos os arquivos .c
 
-SRCS    = $(wildcard *.c)
-PROGS   = $(patsubst %.c,%,$(SRCS))
-CFLAGS  = -std=gnu11
+SRCS    = $(wildcard *.cpp) 
+PROGS   = $(patsubst %.cpp,%,$(SRCS))
 LDFLAGS = -lpthread -lm
 #LDFLAGS = -lpthread -lSDL
 
 all: $(PROGS)
 
-%: %.c
-	gcc $(CFLAGS) -o $@ $< $(LDFLAGS)
+%: %.cpp
+	g++ $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
 	rm -f $(PROGS)
